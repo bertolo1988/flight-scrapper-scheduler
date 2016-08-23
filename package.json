@@ -1,0 +1,42 @@
+{
+  "name": "flight-scrapper-scheduler",
+  "version": "0.0.1",
+  "description": "A scheduler made using node-schedule and flight-scrapper.",
+  "homepage": "https://github.com/bertolo1988/flight-scrapper-scheduler#readme",
+  "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bertolo1988/flight-scrapper-scheduler.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bertolo1988/flight-scrapper-scheduler/issues"
+  },
+  "keywords": [
+    "flight-scrapper",
+    "flights",
+    "fly",
+    "flight",
+    "scrapper",
+    "scheduler",
+    "task"
+  ],
+  "main": "dist/flight-scrapper-scheduler.js",
+  "scripts": {
+    "lint": "jshint --show-non-errors --exclude ./node_modules .",
+    "test": "npm run lint && mocha test --recursive",
+    "debug": "npm run lint && set DEBUG=* && node dist/flight-scrapper-scheduler.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "debug": "2.2.0",
+    "flight-scrapper": "0.0.8",
+    "moment": "2.14.1",
+    "node-schedule": "1.1.1"
+  },
+  "devDependencies": {
+    "jshint": "2.9.2",
+    "mocha": "2.5.3",
+    "should": "11.0.0"
+  }
+}
