@@ -1,7 +1,7 @@
 module.exports = {
 	flightScrapper: {
-		periods: 1,
-		interval: 48,
+		periods: 10,
+		interval: 72,
 		currency: 'USD',
 		directFlight: 'false',
 		dateFormat: 'DD-MM-YYYY',
@@ -16,5 +16,8 @@ module.exports = {
 	}, {
 		from: 'LIS',
 		to: 'MIL'
+	}, {
+		from: 'LIS',
+		to: 'MAN'
 	}],
 };

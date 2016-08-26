@@ -29,6 +29,9 @@ function flightScrapperScheduler() {
 
 	function startJob(options) {
 		debug('Starting with the following options:\n' + JSON.stringify(options, null, 2));
+		debug('Number of routes: ' + options.routes.length);
+		debug('Estimated gathered flights per route: ' + options.flightScrapper.periods * 15);
+		debug('Estimated total flights: ' + options.flightScrapper.periods * 15 * options.routes.length);
 		cron.job(options.cronPattern, scrapFlights(options)).start();
 	}
 
