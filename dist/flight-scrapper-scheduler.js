@@ -1,6 +1,8 @@
 let debug = require('debug')('flight-scrapper-scheduler');
+let CronJob = require('cron').CronJob;
+var jobCount = 0,
+	options;
 let FlightScrapper = require('flight-scrapper');
-let cron = require('cron');
 
 function flightScrapperScheduler() {
 
@@ -11,7 +13,7 @@ function flightScrapperScheduler() {
 		return fsOptions;
 	}
 
-	function scrapFlights(options) {
+	function scrapFlights() {
 		if (options.routes.length > 0) {
 			let route = options.routes.splice(0, 1)[0];
 			let scrapOptions = buildFlightScrapperOptions(options.flightScrapper, route);
@@ -20,23 +22,31 @@ function flightScrapperScheduler() {
 			fsPromise.then((res) => {
 				debug('Retrieved ' + res.length + ' results!');
 				scrapFlights(options);
+				return;
 			});
 		} else {
-			debug('No more routes!');
+			jobCount++;
+			debug('No more routes! Finished job nº' + jobCount);
 			return;
 		}
 	}
 
-	function printStatus(options) {
+	function printStatus() {
 		debug('Starting with the following options:\n' + JSON.stringify(options, null, 2));
 		debug('Number of routes: ' + options.routes.length);
 		debug('Estimated gathered flights per route: ' + options.flightScrapper.periods * 15);
 		debug('Estimated total flights: ' + options.flightScrapper.periods * 15 * options.routes.length);
 	}
 
-	function startJob(options) {
-		printStatus(options);
-		cron.job(options.cronPattern, scrapFlights(options)).start();
+	function startJob(inputOptions) {
+		options = inputOptions;
+		printStatus();
+		job = new CronJob({
+			cronTime: options.cronPattern,
+			onTick: scrapFlights,
+			runOnInit: true,
+			timeZone: 'Europe/London'
+		}).start();
 	}
 
 	return {
