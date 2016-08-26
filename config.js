@@ -1,6 +1,6 @@
 module.exports = {
 	flightScrapper: {
-		periods: 10,
+		periods: 2,
 		interval: 72,
 		currency: 'USD',
 		directFlight: 'false',
@@ -9,7 +9,7 @@ module.exports = {
 		collection: 'flight-data',
 		timeout: 50000
 	},
-	cronPattern: '0 * * * * *',
+	cronPattern: '0 */15 * * * *',
 	routes: [{
 		from: 'LIS',
 		to: 'LON'

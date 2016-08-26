@@ -15,7 +15,7 @@ function flightScrapperScheduler() {
 		if (options.routes.length > 0) {
 			let route = options.routes.splice(0, 1)[0];
 			let scrapOptions = buildFlightScrapperOptions(options.flightScrapper, route);
-			debug('Route:\n' + JSON.stringify(route, null, 2));
+			debug('Working on route:\n' + JSON.stringify(route, null, 2));
 			let fsPromise = FlightScrapper.run(scrapOptions);
 			fsPromise.then((res) => {
 				debug('Retrieved ' + res.length + ' results!');
@@ -27,11 +27,15 @@ function flightScrapperScheduler() {
 		}
 	}
 
-	function startJob(options) {
+	function printStatus(options) {
 		debug('Starting with the following options:\n' + JSON.stringify(options, null, 2));
 		debug('Number of routes: ' + options.routes.length);
 		debug('Estimated gathered flights per route: ' + options.flightScrapper.periods * 15);
 		debug('Estimated total flights: ' + options.flightScrapper.periods * 15 * options.routes.length);
+	}
+
+	function startJob(options) {
+		printStatus(options);
 		cron.job(options.cronPattern, scrapFlights(options)).start();
 	}
 
