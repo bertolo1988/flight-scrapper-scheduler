@@ -3,3 +3,4 @@
 /mongo-db/
 *.pem
 *.log
+*.log.*
