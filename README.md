@@ -7,7 +7,12 @@ Scheduler made using node-schedule and flight-scrapper.
 
 # Options
 
+You can set the desired options in the `config.js` file.
 
+You can know more about the first part, related with flight-scrapper, [here](https://github.com/bertolo1988/flight-scrapper#options).
+
+Regarding the cron pattern you can know more about it [here](https://github.com/ncb000gt/node-cron).
 
 # Running
 
+To run the scheduler-demo simply type `$ npm start` or `$ npm run debug` to get some output in the console.
