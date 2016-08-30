@@ -15,4 +15,8 @@ Regarding the cron pattern you can know more about it [here](https://github.com/
 
 # Running
 
+You need a mongodb database. 
+
+If you have  it installed in the default directory, just type `npm run mongo-win/mongo-mac` whether you use windows or mac.
+
 To run the scheduler-demo simply type `$ npm start` or `$ npm run debug` to get some output in the console.
