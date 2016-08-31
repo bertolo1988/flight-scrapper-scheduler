@@ -1,9 +1,9 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1e8ac2cb49314a9f9404b4415f97953d)](https://www.codacy.com/app/tiagobertolo/flight-scrappper-scheduler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bertolo1988/flight-scrappper-scheduler&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a242995bca784ef1bc3f0054c5e79451)](https://www.codacy.com/app/tiagobertolo/flight-scrappper-scheduler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bertolo1988/flight-scrappper-scheduler&amp;utm_campaign=Badge_Grade)
 [![dependencies Status](https://david-dm.org/bertolo1988/flight-scrappper-scheduler/status.svg)](https://david-dm.org/bertolo1988/flight-scrappper-scheduler)
 [![devDependencies Status](https://david-dm.org/bertolo1988/flight-scrappper-scheduler/dev-status.svg)](https://david-dm.org/bertolo1988/flight-scrappper-scheduler?type=dev)
 
 # flight-scrappper-scheduler
-Scheduler made using node-schedule and flight-scrappper.
+A  way to schedule web scraping tasks using cron and flight-scrappper.
 
 # Options
 

@@ -1,6 +1,5 @@
 var debug = require('debug')('flight-scrappper-scheduler');
 var CronJob = require('cron').CronJob;
-var Moment = require('Moment');
 var tasksCompleted = 0,
 	job, options;
 var FlightScrappper = require('flight-scrappper');
@@ -18,8 +17,7 @@ function flightScrappperScheduler() {
 	}
 
 	function printElapsedTime(start, end) {
-		let now = new Moment().format('MMMM Do YYYY, h:mm:ss a');
-		debug('Completed task nº ' + tasksCompleted + '. Took ' + millisToMinutes(end - start) + ' at ' + now);
+		debug('Started task nº ' + tasksCompleted + ' at ' + start + ' and finished at ' + end + '. Took ' + millisToMinutes(end - start));
 	}
 
 	function printStatus() {
