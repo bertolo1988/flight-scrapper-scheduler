@@ -1,6 +1,6 @@
 module.exports = {
 	flightScrappper: {
-		periods: 60,
+		periods: 50,
 		interval: 96,
 		routes: [{
 			from: 'LIS',
@@ -25,13 +25,7 @@ module.exports = {
 			to: 'BER'
 		}, {
 			from: 'LIS',
-			to: 'RIO'
-		}, {
-			from: 'LIS',
-			to: 'LUA'
-		}, {
-			from: 'LIS',
-			to: 'DXB'
+			to: 'LAD'
 		}],
 		currency: 'USD',
 		directFlight: 'false',
