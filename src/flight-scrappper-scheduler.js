@@ -1,11 +1,11 @@
-var debug = require('debug')('flight-scrapper-scheduler');
+var debug = require('debug')('flight-scrappper-scheduler');
 var CronJob = require('cron').CronJob;
 var Moment = require('Moment');
 var tasksCompleted = 0,
 	job, options;
-var FlightScrapper = require('flight-scrapper');
+var FlightScrappper = require('flight-scrappper');
 
-function flightScrapperScheduler() {
+function flightScrappperScheduler() {
 
 	function millisToMinutes(mseconds) {
 		return new Moment(mseconds).format('mm:ss');
@@ -18,7 +18,7 @@ function flightScrapperScheduler() {
 
 	function printStatus() {
 		let millisPerFlight = 2500;
-		let flightsCount = options.flightScrapper.routes.length * options.flightScrapper.periods * 15;
+		let flightsCount = options.flightScrappper.routes.length * options.flightScrappper.periods * 15;
 		debug('Starting with the following options:\n' + JSON.stringify(options, null, 2));
 		debug('Estimations:');
 		debug('Flights: ' + flightsCount);
@@ -33,7 +33,7 @@ function flightScrapperScheduler() {
 			cronTime: options.cronPattern,
 			onTick() {
 				let startTime = new Date();
-				let scrapPromise = FlightScrapper.run(options.flightScrapper);
+				let scrapPromise = FlightScrappper.run(options.flightScrappper);
 				scrapPromise.then((res) => {
 					tasksCompleted++;
 					debug('Scrapped ' + res.length + ' flights.');
@@ -50,4 +50,4 @@ function flightScrapperScheduler() {
 	};
 }
 
-module.exports = flightScrapperScheduler();
+module.exports = flightScrappperScheduler();

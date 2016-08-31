@@ -1,5 +1,5 @@
 module.exports = {
-	flightScrapper: {
+	flightScrappper: {
 		periods: 2,
 		interval: 72,
 		routes: [{
@@ -12,7 +12,7 @@ module.exports = {
 		currency: 'USD',
 		directFlight: 'false',
 		dateFormat: 'DD-MM-YYYY',
-		database: 'localhost:27017/flight-scrapper',
+		database: 'localhost:27017/flight-scrappper',
 		collection: 'flight-data',
 		timeout: 50000
 	},

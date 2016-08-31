@@ -1,15 +1,15 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1e8ac2cb49314a9f9404b4415f97953d)](https://www.codacy.com/app/tiagobertolo/flight-scrapper-scheduler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bertolo1988/flight-scrapper-scheduler&amp;utm_campaign=Badge_Grade)
-[![dependencies Status](https://david-dm.org/bertolo1988/flight-scrapper-scheduler/status.svg)](https://david-dm.org/bertolo1988/flight-scrapper-scheduler)
-[![devDependencies Status](https://david-dm.org/bertolo1988/flight-scrapper-scheduler/dev-status.svg)](https://david-dm.org/bertolo1988/flight-scrapper-scheduler?type=dev)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1e8ac2cb49314a9f9404b4415f97953d)](https://www.codacy.com/app/tiagobertolo/flight-scrappper-scheduler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bertolo1988/flight-scrappper-scheduler&amp;utm_campaign=Badge_Grade)
+[![dependencies Status](https://david-dm.org/bertolo1988/flight-scrappper-scheduler/status.svg)](https://david-dm.org/bertolo1988/flight-scrappper-scheduler)
+[![devDependencies Status](https://david-dm.org/bertolo1988/flight-scrappper-scheduler/dev-status.svg)](https://david-dm.org/bertolo1988/flight-scrappper-scheduler?type=dev)
 
-# flight-scrapper-scheduler
-Scheduler made using node-schedule and flight-scrapper.
+# flight-scrappper-scheduler
+Scheduler made using node-schedule and flight-scrappper.
 
 # Options
 
 You can set the desired options in the `config.js` file.
 
-You can know more about the first part, related with flight-scrapper, [here](https://github.com/bertolo1988/flight-scrapper#options).
+You can know more about the first part, related with flight-scrappper, [here](https://github.com/bertolo1988/flight-scrappper#options).
 
 Regarding the cron pattern you can know more about it [here](https://github.com/ncb000gt/node-cron).
 
