@@ -1,4 +1,4 @@
 let config = require('./config');
-let FlightScrapperScheduler = require('./src/flight-scrapper-scheduler');
+let FlightScrappperScheduler = require('./src/flight-scrappper-scheduler');
 
-FlightScrapperScheduler.startJob(config);
+FlightScrappperScheduler.startJob(config);
