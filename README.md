@@ -24,3 +24,4 @@ To run the scheduler-demo simply type `$ npm start` or `$ npm run debug` to get 
 
 # Tip
 
+`db.getCollection('flight-data').createIndex({to:1,"time.date":1});` should be a very good index for your database!
