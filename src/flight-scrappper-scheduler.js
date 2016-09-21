@@ -21,7 +21,7 @@ function flightScrappperScheduler() {
 	}
 
 	function printStatus() {
-		let millisFlightPrediction = 1600;
+		let millisFlightPrediction = 2000;
 		let flightsCount = options.flightScrappper.routes.length * options.flightScrappper.periods * 15;
 		debug('Starting with the following options:\n' + JSON.stringify(options, null, 2));
 		debug('Estimations:');
