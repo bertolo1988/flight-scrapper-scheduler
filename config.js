@@ -1,8 +1,11 @@
 module.exports = {
 	flightScrappper: {
-		periods: 60,
-		interval: 96,
+		periods: 100,
+		interval: 48,
 		routes: [{
+			from: 'LIS',
+			to: 'MNL'
+		}, {
 			from: 'LIS',
 			to: 'SHA'
 		}, {
@@ -28,27 +31,24 @@ module.exports = {
 			to: 'LAD'
 		}, {
 			from: 'LIS',
-			to: 'LON'
+			to: 'DXB'
 		}, {
 			from: 'LIS',
-			to: 'MIL'
+			to: 'SYD'
 		}, {
 			from: 'LIS',
-			to: 'PAR'
+			to: 'MPM'
 		}, {
 			from: 'LIS',
-			to: 'BCN'
+			to: 'MOW'
 		}, {
 			from: 'LIS',
-			to: 'IST'
+			to: 'RIO'
 		}, {
 			from: 'LIS',
 			to: 'NYC'
-		}, {
-			from: 'LIS',
-			to: 'BER'
 		}],
-		currency: 'USD',
+		currency: 'EUR',
 		directFlight: 'false',
 		dateFormat: 'DD-MM-YYYY',
 		database: 'localhost:27017/flight-scrappper',
