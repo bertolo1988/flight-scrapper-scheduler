@@ -4,6 +4,15 @@ module.exports = {
 		interval: 72,
 		routes: [{
 			from: 'LIS',
+			to: 'SIN'
+		}, {
+			from: 'LIS',
+			to: 'RAK'
+		}, {
+			from: 'LIS',
+			to: 'CPT'
+		}, {
+			from: 'LIS',
 			to: 'KHI'
 		}, {
 			from: 'LIS',
