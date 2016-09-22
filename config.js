@@ -1,8 +1,23 @@
 module.exports = {
 	flightScrappper: {
-		periods: 100,
-		interval: 48,
+		periods: 85,
+		interval: 72,
 		routes: [{
+			from: 'LIS',
+			to: 'KHI'
+		}, {
+			from: 'LIS',
+			to: 'BOM'
+		}, {
+			from: 'LIS',
+			to: 'JKT'
+		}, {
+			from: 'LIS',
+			to: 'BKK'
+		}, {
+			from: 'LIS',
+			to: 'LIM'
+		}, {
 			from: 'LIS',
 			to: 'SFO'
 		}, {
