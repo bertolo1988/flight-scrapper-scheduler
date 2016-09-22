@@ -4,6 +4,9 @@ module.exports = {
 		interval: 48,
 		routes: [{
 			from: 'LIS',
+			to: 'SFO'
+		}, {
+			from: 'LIS',
 			to: 'MNL'
 		}, {
 			from: 'LIS',
