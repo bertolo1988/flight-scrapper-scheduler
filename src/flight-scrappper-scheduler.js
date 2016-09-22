@@ -10,10 +10,10 @@ function flightScrappperScheduler() {
 		let seconds = parseInt((duration / 1000) % 60),
 			minutes = parseInt((duration / (1000 * 60)) % 60),
 			hours = parseInt((duration / (1000 * 60 * 60)) % 24);
-		hours = (hours < 10) ? "0" + hours : hours;
-		minutes = (minutes < 10) ? "0" + minutes : minutes;
-		seconds = (seconds < 10) ? "0" + seconds : seconds;
-		return hours + ":" + minutes + ":" + seconds;
+		hours = (hours < 10) ? '0' + hours : hours;
+		minutes = (minutes < 10) ? '0' + minutes : minutes;
+		seconds = (seconds < 10) ? '0' + seconds : seconds;
+		return hours + ':' + minutes + ':' + seconds;
 	}
 
 	function printElapsedTime(start, end) {
@@ -22,7 +22,8 @@ function flightScrappperScheduler() {
 
 	function printStatus() {
 		let millisFlightPrediction = 2000;
-		let flightsCount = options.flightScrappper.routes.length * options.flightScrappper.periods * 15;
+		let flightsPerPagePrediction = 15;
+		let flightsCount = options.flightScrappper.routes.length * options.flightScrappper.periods * flightsPerPagePrediction;
 		debug('Starting with the following options:\n' + JSON.stringify(options, null, 2));
 		debug('Estimations:');
 		debug('Flights: ' + flightsCount);

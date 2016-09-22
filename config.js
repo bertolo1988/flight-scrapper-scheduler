@@ -1,6 +1,6 @@
 module.exports = {
 	flightScrappper: {
-		periods: 85,
+		periods: 80,
 		interval: 72,
 		routes: [{
 			from: 'LIS',
