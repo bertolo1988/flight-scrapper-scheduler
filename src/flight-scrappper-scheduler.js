@@ -45,6 +45,7 @@ function flightScrappperScheduler() {
 					printElapsedTime(startTime, new Date());
 				});
 			},
+			runOnInit: options.runOnInit,
 			timeZone: 'Europe/London'
 		}).start();
 	}
