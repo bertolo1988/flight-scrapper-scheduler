@@ -94,5 +94,6 @@ module.exports = {
 		collection: 'flight-data',
 		timeout: 50000
 	},
+	runOnInit: false,
 	cronPattern: '0 0 0 */1 * *'
 };
