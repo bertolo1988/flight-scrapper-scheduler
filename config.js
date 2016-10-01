@@ -10,9 +10,6 @@ module.exports = {
 			to: 'SKD'
 		}, {
 			from: 'LIS',
-			to: 'AMS'
-		}, {
-			from: 'LIS',
 			to: 'HKT'
 		}, {
 			from: 'LIS',
