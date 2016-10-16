@@ -28,10 +28,9 @@ function flightScrappperScheduler() {
         let flightsPerPagePrediction = FLIGHTS_PER_QUERY;
         let flightsCount = options.flightScrappper.routes.length * options.flightScrappper.periods * flightsPerPagePrediction;
         debug('Starting with the following options:\n' + JSON.stringify(options, null, 2));
-        debug('Estimations:');
-        debug('Flights: ' + flightsCount);
-        debug('Millis per flight: ' + millisFlightPrediction);
-        debug('Time per run: ' + millisToMinutes(flightsCount * millisFlightPrediction));
+        debug('Estimated flights: ' + flightsCount);
+        debug('Estimated ms per flight: ' + millisFlightPrediction);
+        debug('Estimated time per run: ' + millisToMinutes(flightsCount * millisFlightPrediction));
     }
 
     function startJob(inputOptions) {
