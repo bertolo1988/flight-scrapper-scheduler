@@ -1,41 +1,41 @@
 {
-  "name": "flight-scrappper-scheduler",
-  "version": "1.0.1-DEV",
-  "description": "A  way to schedule web scraping tasks using cron and flight-scrappper.",
-  "homepage": "https://github.com/bertolo1988/flight-scrappper-scheduler#readme",
-  "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bertolo1988/flight-scrappper-scheduler.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bertolo1988/flight-scrappper-scheduler/issues"
-  },
-  "keywords": [
-    "flight-scrappper",
-    "flights",
-    "scrappper",
-    "scraper",
-    "scheduler",
-    "task"
-  ],
-  "main": "dist/flight-scrappper-scheduler.js",
-  "scripts": {
-    "mongo-mac": "mkdir mongo-db; mongod --dbpath mongo-db",
-    "mongo-win": "mkdir mongo-db & \"C:/Program Files/MongoDb/Server/3.2/bin/mongod.exe\" --dbpath=mongo-db",
-    "lint": "jshint --show-non-errors --exclude ./node_modules .",
-    "test": "npm run lint && mocha test --recursive",
-    "debug": "npm run lint && set DEBUG=flight-scrappper-scheduler && npm start",
-    "full-debug": "npm run lint && set DEBUG=* && npm start",
-    "start": "node scheduler-demo.js"
-  },
-  "dependencies": {
-    "cron": "1.1.0",
-    "debug": "2.2.0",
-    "flight-scrappper": "1.0.4"
-  },
-  "devDependencies": {
-    "jshint": "2.9.3"
-  }
+    "name": "flight-scrappper-scheduler",
+    "version": "1.0.1-DEV",
+    "description": "A  way to schedule web scraping tasks using cron and flight-scrappper.",
+    "homepage": "https://github.com/bertolo1988/flight-scrappper-scheduler#readme",
+    "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bertolo1988/flight-scrappper-scheduler.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/bertolo1988/flight-scrappper-scheduler/issues"
+    },
+    "keywords": [
+        "flight-scrappper",
+        "flights",
+        "scrappper",
+        "scraper",
+        "scheduler",
+        "task"
+    ],
+    "main": "dist/flight-scrappper-scheduler.js",
+    "scripts": {
+        "mongo-mac": "mkdir mongo-db; mongod --dbpath mongo-db",
+        "mongo-win": "mkdir mongo-db & \"C:/Program Files/MongoDb/Server/3.2/bin/mongod.exe\" --dbpath=mongo-db",
+        "lint": "jshint --show-non-errors --exclude ./node_modules .",
+        "test": "npm run lint && mocha test --recursive",
+        "debug": "npm run lint && set DEBUG=flight-scrappper-scheduler && npm start",
+        "full-debug": "npm run lint && set DEBUG=* && npm start",
+        "start": "node scheduler-demo.js"
+    },
+    "dependencies": {
+        "cron": "1.1.1",
+        "debug": "2.2.0",
+        "flight-scrappper": "1.0.5"
+    },
+    "devDependencies": {
+        "jshint": "2.9.3"
+    }
 }
