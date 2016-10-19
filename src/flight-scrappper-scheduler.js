@@ -48,7 +48,7 @@ function flightScrappperScheduler() {
                 });
             },
             runOnInit: options.runOnInit,
-            timeZone: 'Europe/London'
+            timeZone: options.timezone
         }).start();
     }
 

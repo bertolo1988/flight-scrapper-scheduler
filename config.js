@@ -89,8 +89,9 @@ module.exports = {
         dateFormat: 'DD-MM-YYYY',
         database: 'localhost:27017/flight-scrappper',
         collection: 'flight-data',
-        timeout: 50000
+        timeout: 60000
     },
     runOnInit: false,
+    timezone: 'Europe/London',
     cronPattern: '0 30 8 */1 * *'
 };
