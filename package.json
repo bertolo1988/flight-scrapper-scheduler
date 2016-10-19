@@ -1,6 +1,5 @@
 {
     "name": "flight-scrappper-scheduler",
-    "version": "1.0.2-DEV",
     "description": "A  way to schedule web scraping tasks using cron and flight-scrappper.",
     "homepage": "https://github.com/bertolo1988/flight-scrappper-scheduler#readme",
     "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
@@ -33,7 +32,7 @@
     "dependencies": {
         "cron": "1.1.1",
         "debug": "2.2.0",
-        "flight-scrappper": "1.0.5"
+        "flight-scrappper": "1.0.6"
     },
     "devDependencies": {
         "jshint": "2.9.3"
