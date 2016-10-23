@@ -23,6 +23,7 @@ module.exports = {
         timeout: 60000
     },
     cron: {
+        runOnInit: false,
         timezone: 'Europe/London',
         cronPattern: '0 30 8 */1 * *',
     },
