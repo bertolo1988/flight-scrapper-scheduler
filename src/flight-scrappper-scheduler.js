@@ -7,7 +7,6 @@ var FlightScrappper = require('flight-scrappper');
 function flightScrappperScheduler() {
 
     const MS_PER_SEC = 1000;
-    const FLIGHTS_PER_QUERY = 15;
 
     function millisToMinutes(duration) {
         let seconds = parseInt((duration / MS_PER_SEC) % 60),
@@ -23,19 +22,28 @@ function flightScrappperScheduler() {
         debug('Started task nº ' + tasksCompleted + ' at ' + start + ' and finished at ' + end + '. Took ' + millisToMinutes(end - start));
     }
 
-    function printStatus() {
-        let millisFlightPrediction = MS_PER_SEC * 2;
-        let flightsPerPagePrediction = FLIGHTS_PER_QUERY;
-        let flightsCount = options.flightScrappper.routes.length * options.flightScrappper.periods * flightsPerPagePrediction;
-        debug('Starting with the following options:\n' + JSON.stringify(options, null, 2));
-        debug('Estimated flights: ' + flightsCount);
-        debug('Estimated ms per flight: ' + millisFlightPrediction);
-        debug('Estimated time per run: ' + millisToMinutes(flightsCount * millisFlightPrediction));
+    function printOptions() {
+        debug('Starting with the following options:\n' + JSON.stringify(options, null, 4));
+    }
+
+    function reverseRoutes(inputOptions) {
+        if (inputOptions.reverseRoute) {
+            let reversedRoutes = [];
+            for (let route of inputOptions.flightScrappper.routes) {
+                reversedRoutes.push(route);
+                reversedRoutes.push({
+                    from: route.to,
+                    to: route.from
+                });
+            }
+            inputOptions.flightScrappper.routes = reversedRoutes;
+        }
+        return inputOptions;
     }
 
     function startJob(inputOptions) {
-        options = inputOptions;
-        printStatus();
+        options = reverseRoutes(inputOptions);
+        printOptions();
         job = new CronJob({
             cronTime: options.cronPattern,
             onTick() {
