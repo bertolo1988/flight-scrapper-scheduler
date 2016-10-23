@@ -45,7 +45,7 @@ function flightScrappperScheduler() {
         options = reverseRoutes(inputOptions);
         printOptions();
         job = new CronJob({
-            cronTime: options.cronPattern,
+            cronTime: options.cron.cronPattern,
             onTick() {
                 let startTime = new Date();
                 let scrapPromise = FlightScrappper.run(options.flightScrappper);
@@ -55,8 +55,8 @@ function flightScrappperScheduler() {
                     printElapsedTime(startTime, new Date());
                 });
             },
-            runOnInit: options.runOnInit,
-            timeZone: options.timezone
+            runOnInit: options.cron.runOnInit,
+            timeZone: options.cron.timezone
         }).start();
     }
 

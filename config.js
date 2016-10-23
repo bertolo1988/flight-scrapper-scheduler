@@ -22,8 +22,9 @@ module.exports = {
         collection: 'flight-data',
         timeout: 60000
     },
-    runOnInit: false,
-    timezone: 'Europe/London',
-    cronPattern: '0 30 8 */1 * *',
+    cron: {
+        timezone: 'Europe/London',
+        cronPattern: '0 30 8 */1 * *',
+    },
     reverseRoute: true
 };

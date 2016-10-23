@@ -13,17 +13,53 @@ A  way to schedule web scraping tasks using cron and flight-scrappper.
 
 ## Options
 
+```js
+module.exports = {
+    flightScrappper: {
+        periods: 250,
+        interval: 24,
+        routes: [{
+            from: 'LIS',
+            to: 'LON'
+        }, {
+            from: 'LIS',
+            to: 'NYC'
+        }, {
+            from: 'LIS',
+            to: 'BKK'
+        }, {
+            from: 'LIS',
+            to: 'HKT'
+        }],
+        currency: 'EUR',
+        directFlight: false,
+        dateFormat: 'DD-MM-YYYY',
+        database: 'localhost:27017/flight-scrappper',
+        collection: 'flight-data',
+        timeout: 60000
+    },
+    cron: {
+        runOnInit: false,
+        timezone: 'Europe/London',
+        cronPattern: '0 30 8 */1 * *',
+    },
+    reverseRoute: true
+};
+```
+
 You can set the desired options in the `config.js` file.
 
 You can know more about the first part, related with flight-scrappper, [here](https://github.com/bertolo1988/flight-scrappper#options).
 
 Regarding the cron pattern you can know more about it [here](https://github.com/ncb000gt/node-cron).
 
+`reverseRoute` can be used to automatically add the reverse of the previously defined routes. With the config above it would add LON-LIS, NYC-LIS, etc.
+
 ## Running
 
 First, you need to start your mongodb database. 
 
-If you have  it installed in the default directory, just type `$npm run mongo-win/mongo-mac` whether you use windows or mac.
+If you have  it installed in the default directory, just type `$npm run mongo-win/mac/linux` whether you use windows or mac.
 
 To run the scheduler-demo simply type `$ npm start` or `$ npm run debug` to get some output in the console.
 
