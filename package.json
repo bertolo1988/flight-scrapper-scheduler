@@ -1,26 +1,39 @@
 {
     "name": "flight-scrappper-scheduler",
     "version": "2.1.0",
-    "description": "A  way to schedule web scraping tasks using cron and flight-scrappper.",
-    "homepage": "https://github.com/bertolo1988/flight-scrappper-scheduler#readme",
+    "description": "A  way to schedule web scraping tasks using cron and flight-scrappper",
+    "homepage": "https://github.com/bertolo1988/flight-scrappper-scheduler",
     "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
+    "keywords": [
+        "flight",
+        "scrap",
+        "fly",
+        "data",
+        "airport",
+        "cron",
+        "schedule",
+        "flight-scrappper"
+    ],
+    "main": "dist/flight-scrappper-scheduler.js",
+    "engines": {
+        "node": "*"
+    },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/bertolo1988/flight-scrappper-scheduler.git"
+        "url": "https://github.com/bertolo1988/flight-scrappper-scheduler.git"
     },
-    "license": "MIT",
     "bugs": {
         "url": "https://github.com/bertolo1988/flight-scrappper-scheduler/issues"
     },
-    "keywords": [
-        "flight-scrappper",
-        "flights",
-        "scrappper",
-        "scraper",
-        "scheduler",
-        "task"
-    ],
-    "main": "dist/flight-scrappper-scheduler.js",
+    "license": "MIT",
+    "dependencies": {
+        "cron": "1.1.1",
+        "debug": "2.2.0",
+        "flight-scrappper": "2.0.0"
+    },
+    "devDependencies": {
+        "jshint": "2.9.4"
+    },
     "scripts": {
         "mongo-mac": "mkdir mongo-db; mongod --dbpath mongo-db",
         "mongo-win": "mkdir mongo-db & \"C:/Program Files/MongoDb/Server/3.2/bin/mongod.exe\" --dbpath=mongo-db",
@@ -29,13 +42,5 @@
         "debug": "npm run lint && set DEBUG=flight-scrappper-scheduler && npm start",
         "full-debug": "npm run lint && set DEBUG=* && npm start",
         "start": "node scheduler-demo.js"
-    },
-    "dependencies": {
-        "cron": "1.1.1",
-        "debug": "2.2.0",
-        "flight-scrappper": "1.0.6"
-    },
-    "devDependencies": {
-        "jshint": "2.9.3"
     }
 }
