@@ -2,6 +2,13 @@ module.exports = {
     flightScrappper: {
         periods: 250,
         interval: 24,
+        currency: 'EUR',
+        directFlight: false,
+        dateFormat: 'DD-MM-YYYY',
+        database: 'localhost:27017/flight-scrappper',
+        collection: 'flight-data',
+        timeout: 60000,
+        maximize: true,
         routes: [{
             from: 'LIS',
             to: 'LON'
@@ -14,13 +21,7 @@ module.exports = {
         }, {
             from: 'LIS',
             to: 'HKT'
-        }],
-        currency: 'EUR',
-        directFlight: false,
-        dateFormat: 'DD-MM-YYYY',
-        database: 'localhost:27017/flight-scrappper',
-        collection: 'flight-data',
-        timeout: 60000
+        }]
     },
     cron: {
         runOnInit: false,
