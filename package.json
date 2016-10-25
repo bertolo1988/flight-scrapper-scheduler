@@ -29,7 +29,7 @@
     "dependencies": {
         "cron": "1.1.1",
         "debug": "2.2.0",
-        "flight-scrappper": "2.0.0"
+        "flight-scrappper": "2.1.0"
     },
     "devDependencies": {
         "jshint": "2.9.4"

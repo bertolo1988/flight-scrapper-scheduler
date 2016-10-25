@@ -3,8 +3,8 @@ module.exports = {
         periods: 250,
         interval: 24,
         routes: [{
-            from: 'LIS',
-            to: 'LON'
+            from: 'LON',
+            to: 'LIS'
         }, {
             from: 'LIS',
             to: 'NYC'
@@ -20,7 +20,10 @@ module.exports = {
         dateFormat: 'DD-MM-YYYY',
         database: 'localhost:27017/flight-scrappper',
         collection: 'flight-data',
-        timeout: 60000
+        timeout: 60000,
+        browser: 'chrome',
+        chromedriverArgs: ['--verbose', '--log-path=chromedriver.log'],
+        maximize: true
     },
     cron: {
         runOnInit: false,
