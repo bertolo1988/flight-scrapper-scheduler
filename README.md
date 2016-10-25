@@ -19,8 +19,8 @@ module.exports = {
         periods: 250,
         interval: 24,
         routes: [{
-            from: 'LIS',
-            to: 'LON'
+            from: 'LON',
+            to: 'LIS'
         }, {
             from: 'LIS',
             to: 'NYC'
@@ -36,7 +36,10 @@ module.exports = {
         dateFormat: 'DD-MM-YYYY',
         database: 'localhost:27017/flight-scrappper',
         collection: 'flight-data',
-        timeout: 60000
+        timeout: 60000,
+        browser: 'chrome',
+        chromedriverArgs: ['--verbose', '--log-path=chromedriver.log'],
+        maximize: true
     },
     cron: {
         runOnInit: false,
@@ -53,7 +56,7 @@ You can know more about the first part, related with flight-scrappper, [here](ht
 
 Regarding the cron pattern you can know more about it [here](https://github.com/ncb000gt/node-cron).
 
-`reverseRoute` can be used to automatically add the reverse of the previously defined routes. With the config above it would add LON-LIS, NYC-LIS, etc.
+`reverseRoute` can be used to automatically add the reverse of the previously defined routes.
 
 ## Running
 
@@ -61,7 +64,9 @@ First, you need to start your mongodb database.
 
 If you have  it installed in the default directory, just type `$npm run mongo-win/mac/linux` whether you use windows or mac.
 
-To run the scheduler-demo simply type `$ npm start` or `$ npm run debug` to get some output in the console.
+To run the scheduler-demo simply type `$ npm start` or `$ npm run debug` to get even more output in the console.
+
+If you dont want to have visual feedback in the console you can use `$ npm run silent`.
 
 
 ## Tip
