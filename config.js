@@ -1,6 +1,6 @@
 module.exports = {
     flightScrappper: {
-        periods: 250,
+        periods: 240,
         interval: 24,
         routes: [{
             from: 'LON',
@@ -23,7 +23,8 @@ module.exports = {
         timeout: 60000,
         browser: 'chrome',
         chromedriverArgs: ['--verbose', '--log-path=chromedriver.log'],
-        maximize: true
+        maximize: true,
+        retries: 1
     },
     cron: {
         runOnInit: false,
