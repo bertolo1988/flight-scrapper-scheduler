@@ -20,7 +20,7 @@ module.exports = {
         dateFormat: 'DD-MM-YYYY',
         database: 'localhost:27017/flight-scrappper',
         collection: 'flight-data',
-        timeout: 60000,
+        timeout: 80000,
         browser: 'chrome',
         chromedriverArgs: ['--verbose', '--log-path=chromedriver.log'],
         maximize: true,
