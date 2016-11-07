@@ -23,7 +23,7 @@ module.exports = {
         timeout: 80000,
         browser: 'chrome',
         chromedriverArgs: ['--verbose', '--log-path=chromedriver.log'],
-        maximize: true,
+        maximize: false,
         retries: 1
     },
     cron: {
